@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estufa do Joãozinho - Projeto Agrinho Reni</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🌱 Projeto Estufa Do Joãozinho - Sustentável Reni Correia</h1>
+        <nav>
+            <button onclick="mudarPagina('simulador')" class="nav-btn active">Simulador</button>
+            <button onclick="mudarPagina('noticias')" class="nav-btn">Notícias</button>
+            <button onclick="mudarPagina('sobre-agrinho')" class="nav-btn">Sobre o Agrinho</button>
+            <button onclick="mudarPagina('sobre-mim')" class="nav-btn">Sobre Mim</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="simulador" class="pagina ativa">
+            <h2>Simulador de Estufa de Morango</h2>
+            <p>Ajuste os controles abaixo para encontrar o equilíbrio perfeito para a produção de morangos, economizando água e energia!</p>
+            
+            <div class="controles">
+                <div class="controle-item">
+                    <label for="temp">Temperatura: <span id="temp-val">20</span> °C</label>
+                    <input type="range" id="temp" min="0" max="40" value="20" oninput="atualizarSimulador()">
+                </div>
+                
+                <div class="controle-item">
+                    <label for="umidade-ar">Umidade do Ar: <span id="umidade-ar-val">70</span>%</label>
+                    <input type="range" id="umidade-ar" min="0" max="100" value="70" oninput="atualizarSimulador()">
+                </div>
+
+                <div class="controle-item">
+                    <label for="umidade-solo">Umidade do Solo: <span id="umidade-solo-val">65</span>%</label>
+                    <input type="range" id="umidade-solo" min="0" max="100" value="65" oninput="atualizarSimulador()">
+                </div>
+            </div>
+
+            <div class="resultado-estufa">
+                <h3>Status do Morangueiro:</h3>
+                <p id="status-mensagem">Condições ideais! O morangueiro está crescendo forte e saudável.</p>
+                <div id="status-cor" class="status-bom"></div>
+            </div>
+        </section>
+
+        <section id="noticias" class="pagina">
+            <h2>📰 Notícias Agrícolas</h2>
+            <p>Fique atualizado com as últimas novidades sobre tecnologia, sustentabilidade e inovação na agricultura.</p>
+            
+            <div class="noticias-container">
+                <article class="noticia-card">
+                    <h3>🌱 Estufas Inteligentes Aumentam Produção em 40%</h3>
+                    <p><small>25 de março de 2026</small></p>
+                    <p>Novas tecnologias de automação e sensores IoT estão revolucionando o cultivo em estufas. Agricultores que adotaram sistemas inteligentes de monitoramento conseguem aumentar a produção em até 40% enquanto reduzem o consumo de água em 30%.</p>
+                </article>
+
+                <article class="noticia-card">
+                    <h3>💧 Economia de Água: Técnica de Gotejamento</h3>
+                    <p><small>20 de março de 2026</small></p>
+                    <p>A irrigação por gotejamento é reconhecida internacionalmente como uma das técnicas mais eficientes para economizar água. Estudos mostram que este método pode reduzir o consumo de água em 50% comparado à irrigação tradicional, sem comprometer a qualidade das colheitas.</p>
+                </article>
+
+                <article class="noticia-card">
+                    <h3>🏆 Agrinho 2026: Inovação a Serviço da Sustentabilidade</h3>
+                    <p><small>18 de março de 2026</small></p>
+                    <p>O Concurso Agrinho 2026 premia projetos estudantis que combinam tecnologia e preservação ambiental. Este ano, centenas de escolas participam com ideias inovadoras que demonstram como a juventude está comprometida com um futuro agrícola mais sustentável.</p>
+                </article>
+
+                <article class="noticia-card">
+                    <h3>🌍 Certificação de Produção Sustentável</h3>
+                    <p><small>15 de março de 2026</small></p>
+                    <p>Consumidores e comerciantes estão cada vez mais procurando por produtos com certificação sustentável. Propriedades rurais que implementam práticas eco-amigáveis têm acesso a mercados premium e aumentam sua lucratividade em até 25%.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="sobre-agrinho" class="pagina">
+            <h2>Concurso Agrinho 2026</h2>
+            <h3>Tema: Agro forte, futuro sustentável: equilíbrio entre produção e meio ambiente</h3>
+            <p>O Programa Agrinho visa levar informações sobre saúde e segurança pessoal e ambiental para estudantes. Este projeto foca no uso da tecnologia (simuladores) para otimizar o uso de recursos naturais na agricultura, garantindo alta produção com baixo impacto ambiental.</p>
+            
+            <div class="imagem-container">
+                <img src="Agrinho cortado 2026.png" alt="Logo do Concurso Agrinho 2026" id="img-agrinho">
+                <p><em>(Coloque a imagem do concurso na mesma pasta do site com o nome agrinho.jpg)</em></p>
+            </div>
+        </section>
+
+        <section id="sobre-mim" class="pagina">
+            <h2>Sobre Mim</h2>
+            <p>Olá! Sou aluno do 1º ano do Ensino Médio e um entusiasta da tecnologia voltada para a sustentabilidade.</p>
+            <p>Acredito que o futuro da agricultura depende de ideias inovadoras que respeitem o meio ambiente. Desenvolvi este site para demonstrar como o controle inteligente de estufas pode ajudar produtores rurais a economizarem água e evitarem perdas na safra.</p>
+            </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido para o Concurso Agrinho 2026 | Agro forte, futuro sustentável</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
